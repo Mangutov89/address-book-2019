@@ -8,7 +8,16 @@ $(document).ready(function() {
 
     $("ul").append("<li>" + name + "</li>")
     $("li").click(function() {
-      alert("Address: " + address + " Phone number: " + phone + " Email: " + email);
+      // alert("Address: " + address + " Phone number: " + phone + " Email: " + email);
+      $(".jumbotron").show();
+      $("#nameOutput").text(name);
+      $("#addressOutput").text(address);
+      $("#phoneOutput").text(phone);
+      $("#emailOutput").text(email);
+      $(".jumbotron").click(function() {
+        $(".jumbotron").hide();
+      });
+
     });
   });
 });
